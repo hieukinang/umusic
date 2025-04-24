@@ -31,3 +31,7 @@ body {
   z-index: 10;
   background: white;
 }
+
+.transition-sidebar {
+  transition: all 0.3s ease-in-out;
+}

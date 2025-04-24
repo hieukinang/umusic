@@ -12,21 +12,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-screen">
-      <body className="">
+      <body className="h-full overflow-auto"> {/* Thêm overflow-auto vào body để sử dụng thanh cuộn mặc định */}
         <div className="flex h-full justify-center">
           {/* Main Content Area */}
-          <div className="flex flex-col w-full max-w-[calc(1536px-540px)]">
+          <div className="flex flex-col w-full 
+                          sm:max-w-full 
+                          md:max-w-[calc(1536px-480px)] 
+                          lg:max-w-[calc(1536px-540px)] 
+                          xl:max-w-[calc(1536px-600px)]">
             {/* Left Sidebar */}
             <aside className="w-[240px] border-b">
               <LeftSidebar />
             </aside>
-            <main className="flex-1 overflow-y-auto px-10 py-0">
+
+            {/* Main Content */}
+            <main className="flex-1 px-4 py-0">
               {/* SearchBar Container */}
               <div className="sticky top-0 z-10 bg-[#F5F5F5] border-b px-4 py-2">
                 <SearchBar />
               </div>
 
               {children}
+              <PlayerBar />
             </main>
           </div>
 
