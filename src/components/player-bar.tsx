@@ -1,6 +1,6 @@
 export default function PlayerBar() {
     return (
-        <div className="fixed bottom-0 left-0 right-0 h-20 bg-white border-t border-gray-200 flex items-center px-4 z-50">
+        <div className="fixed bottom-0 left-0 right-0 h-20 bg-white border-t border-gray-200 flex items-center px-4 z-30">
             <div className="flex items-center gap-4 w-full">
                 {/* Music Info */}
                 <div className="flex items-center gap-3 w-[30%]">

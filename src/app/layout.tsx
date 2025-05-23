@@ -28,19 +28,18 @@ export default function RootLayout({
             {/* Main Content */}
             <main className="flex-1 px-4 py-0">
               {/* SearchBar Container */}
-              <div className="sticky top-0 z-10 bg-[#F5F5F5] border-b px-4 py-2">
+              <div className="sticky top-0 z-1 bg-[#F5F5F5] border-b px-4 py-2">
                 <SearchBar />
               </div>
 
               {children}
               <PlayerBar />
             </main>
+            <aside className="w-[300px] border-l h-full fixed right-0 z-1">
+              <RightSidebar />
+            </aside>
           </div>
 
-          {/* Right Sidebar */}
-          <aside className="w-[300px] border-l h-full fixed right-0">
-            <RightSidebar />
-          </aside>
         </div>
       </body>
     </html>
