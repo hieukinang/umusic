@@ -45,19 +45,16 @@ export default function LeftSidebar() {
           {/* Navigation */}
           <nav className={`flex flex-col gap-6 p-4 ${isOpen ? 'pl-[30px]' : 'pl-[15px]'}`}>
             {[
-              { href: '/', icon: 'icon_trangchu.png', label: 'Trang chủ', isActive: true },
+              { href: '/', icon: 'icon_trangchu.png', label: 'Trang chủ' },
               { href: '/explore', icon: 'Iconkhampha.png', label: 'Khám phá' },
               { href: '/explore', icon: 'Iconthuvien.png.png', label: 'Thư viện' },
               { href: '/explore', icon: 'Icondoannhac.png', label: 'Đoạn nhạc' },
               { href: '/explore', icon: 'Iconnangcap.png', label: 'Nâng cấp' },
-            ].map(({ href, icon, label, isActive }, i) => (
+            ].map(({ href, icon, label }, i) => (
               <Link
                 key={i}
                 href={href}
-                className={`flex items-center ${isOpen ? 'gap-3 w-full' : 'justify-center'} 
-                  ${isActive
-                    ? 'bg-gradient-to-r from-[rgba(167,12,29,1)] to-[rgba(1,83,180,1)] text-white rounded-lg px-3 py-2'
-                    : 'text-black hover:text-gray-600'}`}
+                className={`flex items-center ${isOpen ? 'gap-3 w-full' : 'justify-center'} text-black hover:text-gray-600`}
               >
                 <img src={`/left-sidebar/${icon}`} alt={label} className="h-6 w-6" />
                 {isOpen && <span>{label}</span>}
